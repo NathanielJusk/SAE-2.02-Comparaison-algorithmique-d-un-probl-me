@@ -45,7 +45,7 @@ public class LivreJeuTest {
     @Test
     void testAjouterObjetRequis() {
         LivreJeu lj = new LivreJeu(1, 10);
-        Objet o = new Objet("o1", "Clé");
+        Objet o = new Objet("o1");
         lj.ajouterObjetRequis(o);
         assertTrue(lj.getObjetsRequis().contains(o));
     }

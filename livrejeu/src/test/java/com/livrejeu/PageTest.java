@@ -30,7 +30,7 @@ public class PageTest {
     void testAjouterObjet() {
         Enigme e = new Enigme("Une énigme", 3);
         Page p = new Page(1, e);
-        Objet o = new Objet("o1", "Clé");
+        Objet o = new Objet("o1");
         p.ajouterObjet(o);
         assertTrue(p.getObjets().contains(o));
     }

@@ -6,14 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ObjetTest {
 
     @Test
-    void testGetId() {
-        Objet o = new Objet("o1", "Clé");
-        assertEquals("o1", o.getId());
+    void testGetNom() {
+        Objet o = new Objet("o1");
+        assertEquals("o1", o.getNom());
     }
 
-    @Test
-    void testGetNom() {
-        Objet o = new Objet("o1", "Clé");
-        assertEquals("Clé", o.getNom());
-    }
+
 }

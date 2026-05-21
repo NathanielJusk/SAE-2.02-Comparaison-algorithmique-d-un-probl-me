@@ -1,17 +1,17 @@
 package com.livrejeu;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Page {
     private int id;
     private Enigme enigme;
-    private List<Objet> objets;
+    private Set<Objet> objets;
 
     public Page(int id, Enigme enigme) {
         this.id = id;
         this.enigme = enigme;
-        this.objets = new ArrayList<>();
+        this.objets = new HashSet<>();
     }
 
     public int getId() {
@@ -22,7 +22,7 @@ public class Page {
         return enigme;
     }
 
-    public List<Objet> getObjets() {
+    public Set<Objet> getObjets() {
         return objets;
     }
 
