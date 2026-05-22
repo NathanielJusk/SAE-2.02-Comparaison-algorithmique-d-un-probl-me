@@ -9,11 +9,19 @@ public class Enigme {
         this.tempsResolution = tempsResolution;
     }
 
-    public String getTexte() {
-        return texte;
+    public int getTempsResolution() {
+        return this.tempsResolution;
     }
 
-    public int getTempsResolution() {
-        return tempsResolution;
+    public String getTexte() {
+        return this.texte;
+    }
+
+    public void setTexte(String texte) {
+        this.texte = texte;
+    }
+
+    public void setTempsResolution(int temps) {
+        this.tempsResolution = temps;
     }
 }
