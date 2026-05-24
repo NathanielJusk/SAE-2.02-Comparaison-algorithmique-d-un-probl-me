@@ -36,6 +36,8 @@ public class LivreJeu {
         this.graphe = new SimpleDirectedWeightedGraph<>(DefaultWeightedEdge.class);
         this.objetsRequis = new HashSet<>();
         this.pages = new HashMap<>();
+        this.pageDepart = null;
+        this.pageSortie = null;
     }
 
     public void ajouterPage(Page p) {

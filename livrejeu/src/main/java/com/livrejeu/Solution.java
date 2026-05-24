@@ -26,10 +26,28 @@ public class Solution {
     }
 
     public boolean estValide(LivreJeu livre) {
-        // TODO: Vérifier le cheminement continu, le départ, la sortie et les objets
-        // requis
-        return false;
+        //verification de premiere page = Page depart
+        if(!(pages.get(0).equals(livre.getPageDepart()))){
+            return false;
+         }
+        //verification de derniere page = Page sortie        
+        if(!(pages.get(pages.size()-1).equals(livre.getPageSortie()))){
+            return false;
+         }
+         // fonction estChaine du Tp1
+         for(int i = 0; i < pages.size()-1; i++){
+            if (!(livre.getGraphe().containsEdge(pages.get(i), pages.get(i+1)))) {
+                return false;
+            }
+         } 
+         // verification objet collecté est l'objet requis
+         Set<Object> objetsCollecté = new HashSet<Object>();
+         for(Page p : pages){
+            objetsCollecté.addAll(p.getObjets());
+         }
+         return objetsCollecté.equals(livre.getObjetsRequis());
     }
+    
 
     public List<Page> getPages() {
         return this.pages;
