@@ -12,6 +12,12 @@ public class EnigmeTest {
     }
 
     @Test
+    void testTestFalse(){
+        Enigme e = new Enigme("Quelle est la couleur du cheval blanc ?", 5);
+        assertNotEquals("zakaria", e.getTexte());
+    }
+
+    @Test
     void testGetTempsResolution() {
         Enigme e = new Enigme("Quelle est la couleur du cheval blanc ?", 5);
         assertEquals(5, e.getTempsResolution());

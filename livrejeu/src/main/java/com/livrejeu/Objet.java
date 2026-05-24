@@ -15,8 +15,11 @@ public class Objet {
 
     @Override
     public boolean equals(Object o) {
-        //todo;
-        return false;
+        if (this == o) return true;
+        if (o == null) return false;
+        if (!(o instanceof Objet)) return false;
+        Objet objet = (Objet) o;
+        return this.nom.equals(objet.nom);
     }
 
     @Override

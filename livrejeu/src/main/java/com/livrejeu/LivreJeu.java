@@ -44,9 +44,9 @@ public class LivreJeu {
     }
 
     public void ajouterLien(Page src, Page dst) {
-        this.graphe.addEdge(src, dst);
-        if (src.getEnigme() != null) {
-            this.graphe.setEdgeWeight(src, dst, src.getEnigme().getTempsResolution());
+        DefaultWeightedEdge edge = this.graphe.addEdge(src, dst);
+        if (edge != null && src.getEnigme() != null) {
+            this.graphe.setEdgeWeight(edge, src.getEnigme().getTempsResolution());
         }
     }
 

@@ -17,7 +17,12 @@ public class Solution {
         this.pages = pages;
         this.tempsExecution = tempsExecution;
         this.longueur = pages != null ? pages.size() : 0;
-        // TODO: Calculer le temps de parcours total
+        this.tempsParcours = 0;
+        if (pages != null) {
+            for (Page page : pages) {
+                this.tempsParcours += page.getEnigme().getTempsResolution();
+            }
+        }
     }
 
     public boolean estValide(LivreJeu livre) {
