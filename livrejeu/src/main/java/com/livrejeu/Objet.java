@@ -15,9 +15,12 @@ public class Objet {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null) return false;
-        if (!(o instanceof Objet)) return false;
+        if (this == o)
+            return true;
+        if (o == null)
+            return false;
+        if (!(o instanceof Objet))
+            return false;
         Objet objet = (Objet) o;
         return this.nom.equals(objet.nom);
     }
@@ -25,5 +28,10 @@ public class Objet {
     @Override
     public int hashCode() {
         return Objects.hash(nom);
+    }
+
+    @Override
+    public String toString() {
+        return "Le nom de l'objet est : " + nom;
     }
 }

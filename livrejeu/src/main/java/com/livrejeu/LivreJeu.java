@@ -1,8 +1,5 @@
 package com.livrejeu;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.jgrapht.Graph;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
@@ -10,20 +7,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.HashMap;
 import java.util.HashSet;
-import org.jgrapht.Graph;
-import org.jgrapht.graph.DefaultEdge;
-import org.jgrapht.graph.DefaultUndirectedGraph;
-import org.jgrapht.graph.SimpleGraph;
-import org.jgrapht.nio.AttributeType;
-import org.jgrapht.nio.DefaultAttribute;
-import org.jgrapht.nio.csv.CSVFormat;
-import org.jgrapht.nio.csv.CSVImporter;
-import org.jgrapht.nio.dot.DOTExporter;
-
-import org.jgrapht.Graph;
-import org.jgrapht.graph.DefaultWeightedEdge;
-import org.jgrapht.graph.SimpleDirectedWeightedGraph;
-import org.jgrapht.util.SupplierUtil;
 
 public class LivreJeu {
     private Graph<Page, DefaultWeightedEdge> graphe;
@@ -86,5 +69,12 @@ public class LivreJeu {
 
     public int getNbPages() {
         return this.pages.size();
+    }
+
+    @Override
+    public String toString() {
+        return "LivreJeu{pages=" + pages.size() +
+                ", depart=" + pageDepart +
+                ", sortie=" + pageSortie + "}";
     }
 }

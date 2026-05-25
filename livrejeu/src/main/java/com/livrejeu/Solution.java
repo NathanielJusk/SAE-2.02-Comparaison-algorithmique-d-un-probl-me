@@ -1,11 +1,9 @@
 package com.livrejeu;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import java.util.List;
 
 public class Solution {
     private List<Page> pages;
@@ -26,28 +24,27 @@ public class Solution {
     }
 
     public boolean estValide(LivreJeu livre) {
-        //verification de premiere page = Page depart
-        if(!(pages.get(0).equals(livre.getPageDepart()))){
+        // verification de premiere page = Page depart
+        if (!(pages.get(0).equals(livre.getPageDepart()))) {
             return false;
-         }
-        //verification de derniere page = Page sortie        
-        if(!(pages.get(pages.size()-1).equals(livre.getPageSortie()))){
+        }
+        // verification de derniere page = Page sortie
+        if (!(pages.get(pages.size() - 1).equals(livre.getPageSortie()))) {
             return false;
-         }
-         // fonction estChaine du Tp1
-         for(int i = 0; i < pages.size()-1; i++){
-            if (!(livre.getGraphe().containsEdge(pages.get(i), pages.get(i+1)))) {
+        }
+        // fonction estChaine du Tp1
+        for (int i = 0; i < pages.size() - 1; i++) {
+            if (!(livre.getGraphe().containsEdge(pages.get(i), pages.get(i + 1)))) {
                 return false;
             }
-         } 
-         // verification objet collecté est l'objet requis
-         Set<Object> objetsCollecté = new HashSet<Object>();
-         for(Page p : pages){
-            objetsCollecté.addAll(p.getObjets());
-         }
-         return objetsCollecté.equals(livre.getObjetsRequis());
+        }
+        // verification objet collecté est l'objet requis
+        Set<Objet> objetsCollectes = new HashSet<Objet>();
+        for (Page p : pages) {
+            objetsCollectes.addAll(p.getObjets());
+        }
+        return objetsCollectes.equals(livre.getObjetsRequis());
     }
-    
 
     public List<Page> getPages() {
         return this.pages;
@@ -67,7 +64,18 @@ public class Solution {
 
     @Override
     public String toString() {
-        // TODO: Formater l'affichage de la solution
-        return "Solution...";
+        StringBuilder sb = new StringBuilder();
+        sb.append("=== Solution ===\n");
+        sb.append("Longueur       : ").append(longueur).append(" pages\n");
+        sb.append("Temps parcours : ").append(tempsParcours).append(" sec\n");
+        sb.append("Temps exécution: ").append(tempsExecution).append(" ms\n");
+        sb.append("Chemin         : ");
+        for (int i = 0; i < pages.size(); i++) {
+            sb.append("Page ").append(pages.get(i).getId());
+            if (i < pages.size() - 1)
+                sb.append(" -> ");
+        }
+        sb.append("\n================");
+        return sb.toString();
     }
 }
