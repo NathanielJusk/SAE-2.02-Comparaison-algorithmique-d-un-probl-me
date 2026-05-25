@@ -63,11 +63,16 @@ public class AlgorithmeDijkstra implements AlgorithmeRecherche {
 
         djikstra(graphe, cout, predecesseur);
 
-        if (cout.get(sortie) == Integer.MAX_VALUE) return null;
+        if (cout.get(sortie) == Integer.MAX_VALUE) {
+            return null;
+        }
+            
 
         List<Page> chemin = reconstruireChemin(predecesseur, sortie);
 
-        if (!objetsValides(chemin, livre.getObjetsRequis())) return null;
+        if (!objetsValides(chemin, livre.getObjetsRequis())){
+           return null; 
+        } 
 
         long fin = System.currentTimeMillis();
         return new Solution(chemin, fin - debut);
