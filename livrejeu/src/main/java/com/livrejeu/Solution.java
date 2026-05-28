@@ -43,7 +43,7 @@ public class Solution {
         for (Page p : pages) {
             objetsCollectes.addAll(p.getObjets());
         }
-        return objetsCollectes.equals(livre.getObjetsRequis());
+        return objetsCollectes.containsAll(livre.getObjetsRequis());
     }
 
     public List<Page> getPages() {
