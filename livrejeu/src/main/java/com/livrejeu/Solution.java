@@ -72,6 +72,7 @@ public class Solution {
         sb.append("Chemin         : ");
         for (int i = 0; i < pages.size(); i++) {
             sb.append("Page ").append(pages.get(i).getId());
+         sb.append(" : Temps Enigme ").append(pages.get(i).getEnigme().getTempsResolution());
             if (i < pages.size() - 1)
                 sb.append(" -> ");
         }

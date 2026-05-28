@@ -79,8 +79,6 @@ public class AlgorithmeDijkstra implements AlgorithmeRecherche {
     }
     
 
-    // On initialise tout les couts à + l'infini hors mi
-    // la page source qui est initialisé à 0
     private Map<Page, Integer> initialisationDuCout(Graph<Page, DefaultWeightedEdge> graphe, Page source) {
         Map<Page, Integer> cout = new HashMap<>();
         for (Page p : graphe.vertexSet()) {
@@ -90,7 +88,6 @@ public class AlgorithmeDijkstra implements AlgorithmeRecherche {
         return cout;
     }
 
-    // initialiser tout les predecesseur à null
     private Map<Page, Page> initialisationPredecesseurs(Graph<Page, DefaultWeightedEdge> graphe) {
         Map<Page, Page> predecesseurs = new HashMap<>();
         for (Page p : graphe.vertexSet()) {

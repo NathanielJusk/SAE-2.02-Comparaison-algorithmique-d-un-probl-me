@@ -13,8 +13,8 @@ public class AlgorithmeBFS implements AlgorithmeRecherche {
 
     @Override
     public Solution resoudre(LivreJeu livre) {
+        
         long debut = System.currentTimeMillis();
-
         Graph<Page, DefaultWeightedEdge> graphe = livre.getGraphe();
         Page source = livre.getPageDepart();
         Page sortie = livre.getPageSortie();

@@ -1,8 +1,6 @@
 package com.livrejeu.generation;
 
 import com.livrejeu.LivreJeu;
-import com.livrejeu.Page;
-import com.livrejeu.Solution;
 import com.livrejeu.Objet;
 
 

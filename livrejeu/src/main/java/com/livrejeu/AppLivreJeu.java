@@ -1,10 +1,10 @@
 package com.livrejeu;
 
+import com.livrejeu.algorithme.AlgorithmeBFS;
 import com.livrejeu.algorithme.AlgorithmeDijkstra;
 import com.livrejeu.generation.GenerateurV1;
 import com.livrejeu.generation.GenerateurV2;
 import com.livrejeu.LecteurHistoire;
-
 
 import java.io.IOException;
 import java.util.List;
@@ -13,7 +13,6 @@ import java.util.Scanner;
 public class AppLivreJeu {
 
     private LivreJeu livre;
-
 
     // ── saisir un entier ──
     private static int saisirNbPages(Scanner scanner) {
@@ -67,15 +66,15 @@ public class AppLivreJeu {
                 case "1" -> {
                     int n = saisirNbPages(scanner);
                     app.livre = new GenerateurV1()
-                                    .genererDepuisPages(pagesDisponibles, n);
+                            .genererDepuisPages(pagesDisponibles, n);
                     System.out.println("Livre genere avec " + n + " pages.");
                 }
 
-                // case "2" -> {
-                //     int n = saisirNbPages(scanner);
-                //     app.livre = new GenerateurV2()
-                //                     .genererDepuisPages(pagesDisponibles, n, scanner);
-                // }
+                case "2" -> {
+                    int n = saisirNbPages(scanner);
+                    app.livre = new GenerateurV2()
+                            .genererDepuisPages(pagesDisponibles, n, scanner);
+                }
 
                 case "3" -> {
                     if (app.livre == null) {
@@ -90,7 +89,26 @@ public class AppLivreJeu {
                         System.out.println("Aucun livre en memoire.");
                         break;
                     }
-                    Solution sol = new AlgorithmeDijkstra().resoudre(app.livre);
+
+                    System.out.println("Choisissez l'algorithme :");
+                    System.out.println("  1. Dijkstra");
+                    System.out.println("  2. BFS");
+                    System.out.print("Votre choix : ");
+                    String choixAlgo = scanner.nextLine().trim();
+
+                    Solution sol = null;
+
+                    if (choixAlgo.equals("1")) {
+                        System.out.println("Resolution en cours avec Dijkstra...");
+                        sol = new AlgorithmeDijkstra().resoudre(app.livre);
+                    } else if (choixAlgo.equals("2")) {
+                        System.out.println("Resolution en cours avec BFS...");
+                        sol = new AlgorithmeBFS().resoudre(app.livre);
+                    } else {
+                        System.out.println("Choix invalide.");
+                        break;
+                    }
+
                     if (sol != null) {
                         System.out.println(sol);
                     } else {
@@ -98,29 +116,16 @@ public class AppLivreJeu {
                     }
                 }
 
-                // case "5" -> {
-                //     if (app.livre == null) {
-                //         System.out.println("Aucun livre en memoire.");
-                //         break;
-                //     }
-                //     System.out.print("Nom du fichier CSV : ");
-                //     LecteurHistoire.sauvegarder(app.livre, scanner.nextLine().trim());
-                // }
-
-                case "6" -> {
+                case "5" -> {
                     if (app.livre == null) {
                         System.out.println("Aucun livre en memoire.");
                         break;
                     }
-                    System.out.print("Nom du fichier DOT : ");
-                    String nomDot = scanner.nextLine().trim();
+                    System.out.print("Nom du fichier CSV : ");
                     try {
-                        LecteurHistoire.sauvegarder(app.livre, nomDot);
-                        System.out.println("Fichier exporte : " + nomDot);
-                        System.out.println("Pour generer le PDF :");
-                        System.out.println("  dot -Tpdf " + nomDot + " -o livre.pdf");
+                        SauvegardeLivreJeu.sauvegarder(app.livre, scanner.nextLine().trim());
                     } catch (IOException e) {
-                        System.out.println("Erreur export : " + e.getMessage());
+                        System.out.println("Erreur : impossible de sauvegarder le fichier.");
                     }
                 }
 

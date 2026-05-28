@@ -20,14 +20,9 @@ public class GenerateurV1 implements IGenerateur {
     }
 
     public LivreJeu genererDepuisPages(List<Page> pagesDisponibles, int nbPages) {
-
-        // Copie pour ne pas modifier la liste originale
         List<Page> copie = new ArrayList<>(pagesDisponibles);
-
-        // Melange aleatoire
         Collections.shuffle(copie);
 
-        // Prendre les nbPages premieres pages
         List<Page> pagesChoisies = new ArrayList<>();
         for (int i = 0; i < nbPages && i < copie.size(); i++) {
             pagesChoisies.add(copie.get(i));
@@ -56,7 +51,6 @@ public class GenerateurV1 implements IGenerateur {
         livre.setPageDepart(depart);
         livre.setPageSortie(sortie);
 
-        // Chemin garanti + fausse piste toutes les 3 pages
         for (int i = 0; i < pagesChoisies.size() - 1; i++) {
             livre.ajouterLien(pagesChoisies.get(i), pagesChoisies.get(i + 1));
 
