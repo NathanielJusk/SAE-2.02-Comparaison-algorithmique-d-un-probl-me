@@ -1,9 +1,6 @@
 package com.livrejeu.generation;
-
 import com.livrejeu.LivreJeu;
 import com.livrejeu.Objet;
-
-
 import java.util.Map;
 import java.util.Set;
 

@@ -3,8 +3,6 @@ package com.livrejeu;
 import com.livrejeu.algorithme.AlgorithmeBFS;
 import com.livrejeu.algorithme.AlgorithmeDijkstra;
 import com.livrejeu.generation.GenerateurV1;
-import com.livrejeu.generation.GenerateurV2;
-import com.livrejeu.LecteurHistoire;
 
 import java.io.IOException;
 import java.util.List;
