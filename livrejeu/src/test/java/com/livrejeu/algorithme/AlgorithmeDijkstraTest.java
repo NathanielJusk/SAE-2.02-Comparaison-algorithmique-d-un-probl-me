@@ -33,7 +33,7 @@ public class AlgorithmeDijkstraTest {
         assertEquals(2, sol.getPages().size());
     }
 
-    // ── Test 2 : aucun chemin possible
+    //  Test 2 : aucun chemin possible
     @Test
     void testAucunChemin() {
         LivreJeu livre = new LivreJeu();

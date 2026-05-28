@@ -16,7 +16,28 @@ public class GenerateurV1 implements IGenerateur {
     @Override
     public LivreJeu generer(int nbPages, int idDepart, int idSortie,
             Map<Integer, Set<Objet>> objets) {
-        return new LivreJeu();
+        LivreJeu livre = new LivreJeu();
+        List<Page> pagesChoisies = new ArrayList<>();
+        
+        for (int i = 1; i <= nbPages; i++) {
+            Set<Objet> pageObjets = objets != null && objets.containsKey(i) ? objets.get(i) : new HashSet<>();
+            Page p = new Page(i, new com.livrejeu.Enigme("Enigme " + i, 1), pageObjets);
+            livre.ajouterPage(p);
+            pagesChoisies.add(p);
+            
+            if (i == idDepart) {
+                livre.setPageDepart(p);
+            }
+            if (i == idSortie) {
+                livre.setPageSortie(p);
+            }
+        }
+        
+        for (int i = 0; i < pagesChoisies.size() - 1; i++) {
+            livre.ajouterLien(pagesChoisies.get(i), pagesChoisies.get(i + 1));
+        }
+        
+        return livre;
     }
 
     public LivreJeu genererDepuisPages(List<Page> pagesDisponibles, int nbPages) {

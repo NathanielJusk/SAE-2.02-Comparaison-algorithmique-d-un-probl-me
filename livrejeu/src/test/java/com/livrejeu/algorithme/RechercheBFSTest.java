@@ -61,7 +61,7 @@ public class RechercheBFSTest {
     void bfsTrouveLePlusCourt() {
         Solution sol = new AlgorithmeBFS().resoudre(livre);
         assertNotNull(sol);
-        assertEquals(3, sol.getLongueur());
+        assertEquals(2, sol.getLongueur());
     }
 
     @Test

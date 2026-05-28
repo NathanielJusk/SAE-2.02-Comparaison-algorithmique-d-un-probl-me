@@ -16,7 +16,28 @@ public class GenerateurV2 implements IGenerateur {
     @Override
     public LivreJeu generer(int nbPages, int idDepart, int idSortie,
             Map<Integer, Set<Objet>> objets) {
-        return new LivreJeu();
+        LivreJeu livre = new LivreJeu();
+        List<Page> pagesChoisies = new ArrayList<>();
+        
+        for (int i = 1; i <= nbPages; i++) {
+            Set<Objet> pageObjets = objets != null && objets.containsKey(i) ? objets.get(i) : new HashSet<>();
+            Page p = new Page(i, new com.livrejeu.Enigme("Enigme " + i, 1), pageObjets);
+            livre.ajouterPage(p);
+            pagesChoisies.add(p);
+            
+            if (i == idDepart) {
+                livre.setPageDepart(p);
+            }
+            if (i == idSortie) {
+                livre.setPageSortie(p);
+            }
+        }
+        
+        for (int i = 0; i < pagesChoisies.size() - 1; i++) {
+            livre.ajouterLien(pagesChoisies.get(i), pagesChoisies.get(i + 1));
+        }
+        
+        return livre;
     }
 
     public LivreJeu genererDepuisPages(List<Page> pagesDisponibles, int nbPages, Scanner scanner) {
@@ -32,7 +53,8 @@ public class GenerateurV2 implements IGenerateur {
         System.out.println("Choisissez " + nbPages + " pages (entrez leur ID) :");
         for (int i = 0; i < nbPages; i++) {
             System.out.print(" Page " + (i + 1) + " : ");
-            int id = Integer.parseInt(scanner.nextLine().trim());
+            int id = scanner.nextInt();
+            scanner.nextLine(); // vider le buffer
 
             Page pageTrouvee = null;
             for (Page p : pagesDisponibles) {
@@ -51,7 +73,8 @@ public class GenerateurV2 implements IGenerateur {
         }
 
         System.out.println("ID de la page de DEPART :");
-        int idPageDepart = Integer.parseInt(scanner.nextLine().trim());
+        int idPageDepart = scanner.nextInt();
+        scanner.nextLine();
         for (Page p : pagesChoisies) {
             if (p.getId() == idPageDepart) {
                 livre.setPageDepart(p);
@@ -59,7 +82,8 @@ public class GenerateurV2 implements IGenerateur {
         }
 
         System.out.println("ID de la page de SORTIE :");
-        int idPageSortie = Integer.parseInt(scanner.nextLine().trim());
+        int idPageSortie = scanner.nextInt();
+        scanner.nextLine();
         for (Page p : pagesChoisies) {
             if (p.getId() == idPageSortie) {
                 livre.setPageSortie(p);

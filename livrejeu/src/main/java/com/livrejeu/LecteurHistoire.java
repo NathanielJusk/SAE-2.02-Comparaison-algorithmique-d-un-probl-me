@@ -15,27 +15,30 @@ public class LecteurHistoire {
         BufferedReader reader = new BufferedReader(new FileReader(cheminFichier));
 
         // Sauter l'en-tete
-        reader.readLine();
+        String ligne = reader.readLine();
 
-        String ligne;
         int id = 1;
-
-        while ((ligne = reader.readLine()) != null) {
-            if (ligne.trim().isEmpty()) continue;
-
+        ligne = reader.readLine();
+        
+        while (ligne != null) {
+            // on separe les elements
             String[] col = ligne.split(",");
-            String texte = col[0].trim();
-            int temps    = Integer.parseInt(col[1].trim());
+            
+            String texte = col[0];
+            int temps = Integer.parseInt(col[1]);
 
             Set<Objet> objets = new HashSet<>();
-            if (col.length > 2 && !col[2].trim().isEmpty()) {
-                for (String nom : col[2].split(";")) {
-                    objets.add(new Objet(nom.trim()));
-                }
+            
+            // gestion basique de la presence d'objet ou non
+            if (col.length == 3) {
+                objets.add(new Objet(col[2]));
             }
 
-            pages.add(new Page(id, new Enigme(texte, temps), objets));
+            Page p = new Page(id, new Enigme(texte, temps), objets);
+            pages.add(p);
+            
             id++;
+            ligne = reader.readLine();
         }
 
         reader.close();
