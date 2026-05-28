@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net">
+<mxfile host="Electron">
   <diagram name="Page-1" id="NWipypLyPp6VdUB8PEiN">
-    <mxGraphModel dx="2386" dy="891" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5343" dy="3464" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -190,8 +190,8 @@
         <mxCell id="RhdLO244a1FOSSQvhS0o-62" parent="RhdLO244a1FOSSQvhS0o-60" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+resoudre(LivreJeu livre) : Solution" vertex="1">
           <mxGeometry height="47" width="356" y="79" as="geometry" />
         </mxCell>
-        <mxCell id="RhdLO244a1FOSSQvhS0o-63" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=47.2;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="AlgorithmeRecherche1" vertex="1">
-          <mxGeometry height="102.2" width="360" x="1084" y="1133" as="geometry" />
+        <mxCell id="RhdLO244a1FOSSQvhS0o-63" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=47.2;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="AlgorithmeDjikstra" vertex="1">
+          <mxGeometry height="149.2" width="360" x="1084" y="1133" as="geometry" />
         </mxCell>
         <mxCell id="RhdLO244a1FOSSQvhS0o-64" parent="RhdLO244a1FOSSQvhS0o-63" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
           <mxGeometry height="8" width="360" y="47.2" as="geometry" />
@@ -199,14 +199,20 @@
         <mxCell id="RhdLO244a1FOSSQvhS0o-65" parent="RhdLO244a1FOSSQvhS0o-63" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+resoudre(LivreJeu livre) : Solution" vertex="1">
           <mxGeometry height="47" width="360" y="55.2" as="geometry" />
         </mxCell>
-        <mxCell id="RhdLO244a1FOSSQvhS0o-66" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=47.2;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="AlgorithmeRecherche2" vertex="1">
-          <mxGeometry height="102.2" width="360" x="1495" y="1133" as="geometry" />
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-1" parent="RhdLO244a1FOSSQvhS0o-63" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+objetsCollectes(chemin : List&lt;Page&gt;) : Set&lt;Objet&gt;" vertex="1">
+          <mxGeometry height="47" width="360" y="102.2" as="geometry" />
+        </mxCell>
+        <mxCell id="RhdLO244a1FOSSQvhS0o-66" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=47.2;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="AlgorithmeBFS" vertex="1">
+          <mxGeometry height="149.2" width="400" x="1480" y="1133" as="geometry" />
         </mxCell>
         <mxCell id="RhdLO244a1FOSSQvhS0o-67" parent="RhdLO244a1FOSSQvhS0o-66" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
-          <mxGeometry height="8" width="360" y="47.2" as="geometry" />
+          <mxGeometry height="8" width="400" y="47.2" as="geometry" />
         </mxCell>
         <mxCell id="RhdLO244a1FOSSQvhS0o-68" parent="RhdLO244a1FOSSQvhS0o-66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+resoudre(LivreJeu livre) : Solution" vertex="1">
-          <mxGeometry height="47" width="360" y="55.2" as="geometry" />
+          <mxGeometry height="47" width="400" y="55.2" as="geometry" />
+        </mxCell>
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-2" parent="RhdLO244a1FOSSQvhS0o-66" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+objetsValides(chemin : List&lt;Page&gt;, objetsRequis Set&lt;Objet&gt;) : Solution" vertex="1">
+          <mxGeometry height="47" width="400" y="102.2" as="geometry" />
         </mxCell>
         <mxCell id="RhdLO244a1FOSSQvhS0o-69" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=71;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="&lt;&lt;interface&gt;&gt;&#xa;IGenerateur" vertex="1">
           <mxGeometry height="126" width="722" x="670" y="330" as="geometry" />
@@ -218,7 +224,7 @@
           <mxGeometry height="47" width="722" y="79" as="geometry" />
         </mxCell>
         <mxCell id="RhdLO244a1FOSSQvhS0o-72" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=47.2;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="GenerateurV1" vertex="1">
-          <mxGeometry height="102.2" width="730" x="1905" y="1133" as="geometry" />
+          <mxGeometry height="149.2" width="730" x="1905" y="1133" as="geometry" />
         </mxCell>
         <mxCell id="RhdLO244a1FOSSQvhS0o-73" parent="RhdLO244a1FOSSQvhS0o-72" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
           <mxGeometry height="8" width="730" y="47.2" as="geometry" />
@@ -226,8 +232,11 @@
         <mxCell id="RhdLO244a1FOSSQvhS0o-74" parent="RhdLO244a1FOSSQvhS0o-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+generer(int nbPages, int idDepart, int idSortie, Map&lt;Integer, Set&lt;Objet&gt;&gt; objets) : LivreJeu" vertex="1">
           <mxGeometry height="47" width="730" y="55.2" as="geometry" />
         </mxCell>
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-3" parent="RhdLO244a1FOSSQvhS0o-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+genererDepuisPages(pagesDisponibles : List&lt;Page&gt;,nbPages : int) : LivreJeu" vertex="1">
+          <mxGeometry height="47" width="730" y="102.2" as="geometry" />
+        </mxCell>
         <mxCell id="RhdLO244a1FOSSQvhS0o-75" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=47.2;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="GenerateurV2" vertex="1">
-          <mxGeometry height="102.2" width="730" x="2685" y="1133" as="geometry" />
+          <mxGeometry height="149.2" width="730" x="2685" y="1133" as="geometry" />
         </mxCell>
         <mxCell id="RhdLO244a1FOSSQvhS0o-76" parent="RhdLO244a1FOSSQvhS0o-75" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
           <mxGeometry height="8" width="730" y="47.2" as="geometry" />
@@ -235,17 +244,17 @@
         <mxCell id="RhdLO244a1FOSSQvhS0o-77" parent="RhdLO244a1FOSSQvhS0o-75" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+generer(int nbPages, int idDepart, int idSortie, Map&lt;Integer, Set&lt;Objet&gt;&gt; objets) : LivreJeu" vertex="1">
           <mxGeometry height="47" width="730" y="55.2" as="geometry" />
         </mxCell>
-        <mxCell id="RhdLO244a1FOSSQvhS0o-78" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40.57142857142857;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="AppLivreJeu" vertex="1">
-          <mxGeometry height="130.57142857142856" width="425" x="-390" y="1080" as="geometry" />
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-4" parent="RhdLO244a1FOSSQvhS0o-75" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+genererDepuisPages(pagesDisponibles : List&lt;Page&gt;,nbPages : int, scanner : Scanner) : LivreJeu" vertex="1">
+          <mxGeometry height="47" width="730" y="102.2" as="geometry" />
+        </mxCell>
+        <mxCell id="RhdLO244a1FOSSQvhS0o-78" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40.57142857142857;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="SauvegarderLivreJeu" vertex="1">
+          <mxGeometry height="89.57142857142857" width="425" x="-390" y="1133" as="geometry" />
         </mxCell>
         <mxCell id="RhdLO244a1FOSSQvhS0o-79" parent="RhdLO244a1FOSSQvhS0o-78" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
           <mxGeometry height="8" width="425" y="40.57142857142857" as="geometry" />
         </mxCell>
-        <mxCell id="RhdLO244a1FOSSQvhS0o-80" parent="RhdLO244a1FOSSQvhS0o-78" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+sauvegarder(LivreJeu livre, String chemin) : void" vertex="1">
+        <mxCell id="RhdLO244a1FOSSQvhS0o-80" parent="RhdLO244a1FOSSQvhS0o-78" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" value="+ sauvegarder(LivreJeu livre, String chemin) : void" vertex="1">
           <mxGeometry height="41" width="425" y="48.57142857142857" as="geometry" />
-        </mxCell>
-        <mxCell id="RhdLO244a1FOSSQvhS0o-81" parent="RhdLO244a1FOSSQvhS0o-78" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+charger(String chemin) : LivreJeu" vertex="1">
-          <mxGeometry height="41" width="425" y="89.57142857142857" as="geometry" />
         </mxCell>
         <mxCell id="RhdLO244a1FOSSQvhS0o-82" edge="1" parent="1" source="RhdLO244a1FOSSQvhS0o-28" style="curved=1;startArrow=diamondThin;startSize=14;startFill=1;endArrow=none;exitX=0.19;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="RhdLO244a1FOSSQvhS0o-16" value="contient">
           <mxGeometry relative="1" as="geometry">
@@ -329,12 +338,44 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RhdLO244a1FOSSQvhS0o-97" edge="1" parent="1" source="RhdLO244a1FOSSQvhS0o-81" style="curved=0;dashed=1;startArrow=none;endArrow=open;endSize=12;rounded=0;" value="gère">
+        <mxCell id="RhdLO244a1FOSSQvhS0o-97" edge="1" parent="1" source="RhdLO244a1FOSSQvhS0o-78" style="curved=0;dashed=1;startArrow=none;endArrow=open;endSize=12;rounded=0;entryX=0.171;entryY=1.19;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.526;exitY=0.035;exitDx=0;exitDy=0;exitPerimeter=0;" target="heZnuo9UzmpXaJKCNuNG-23" value="gère">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="80" y="1190" />
-            </Array>
+            <Array as="points" />
             <mxPoint x="180" y="1170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=27.555555555555557;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="AppLivreJeu" vertex="1">
+          <mxGeometry height="91.55555555555556" width="381" x="110" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-11" parent="heZnuo9UzmpXaJKCNuNG-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="381" y="27.555555555555557" as="geometry" />
+        </mxCell>
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-22" parent="heZnuo9UzmpXaJKCNuNG-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" value="main() : void" vertex="1">
+          <mxGeometry height="28" width="381" y="35.55555555555556" as="geometry" />
+        </mxCell>
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-23" parent="heZnuo9UzmpXaJKCNuNG-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" value="-saisirNbPages(scanner : Scanner) : int" vertex="1">
+          <mxGeometry height="28" width="381" y="63.55555555555556" as="geometry" />
+        </mxCell>
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-24" edge="1" parent="1" source="heZnuo9UzmpXaJKCNuNG-23" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.439;entryY=0.01;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.477;exitY=1.148;exitDx=0;exitDy=0;exitPerimeter=0;" target="RhdLO244a1FOSSQvhS0o-28" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="70" y="590" as="sourcePoint" />
+            <mxPoint x="230" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-25" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40.57142857142857;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="LecteurHistoire" vertex="1">
+          <mxGeometry height="89.57142857142857" width="425" x="-390" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-26" parent="heZnuo9UzmpXaJKCNuNG-25" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1">
+          <mxGeometry height="8" width="425" y="40.57142857142857" as="geometry" />
+        </mxCell>
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-28" parent="heZnuo9UzmpXaJKCNuNG-25" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" value="+charger(String chemin) : LivreJeu" vertex="1">
+          <mxGeometry height="41" width="425" y="48.57142857142857" as="geometry" />
+        </mxCell>
+        <mxCell id="heZnuo9UzmpXaJKCNuNG-29" edge="1" parent="1" source="heZnuo9UzmpXaJKCNuNG-25" style="curved=0;dashed=1;startArrow=none;endArrow=open;endSize=12;rounded=1;entryX=0.356;entryY=1.19;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" value="gère">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="-39.99999999999977" y="1234.68" as="sourcePoint" />
+            <mxPoint x="218.88599999999997" y="821.5555555555553" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
