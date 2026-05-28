@@ -1,9 +1,5 @@
 package com.livrejeu;
 
-import com.livrejeu.Enigme;
-import com.livrejeu.Objet;
-import com.livrejeu.Page;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
