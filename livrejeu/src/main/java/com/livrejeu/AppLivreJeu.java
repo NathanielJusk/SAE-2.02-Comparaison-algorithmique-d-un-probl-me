@@ -129,7 +129,7 @@ public class AppLivreJeu {
 
                     if (sol != null) {
                         System.out.println(sol);
-                        System.out.println("   --> Passez au choix 5 ou 6 pour sauvegarder.");
+                        System.out.println("   --> Passez au choix 5 pour sauvegarder.");
                     } else {
                         System.out.println("   Aucune solution trouvee.");
                         System.out.println("   [!] Verifiez que vos liens forment un chemin du depart a la sortie.");
