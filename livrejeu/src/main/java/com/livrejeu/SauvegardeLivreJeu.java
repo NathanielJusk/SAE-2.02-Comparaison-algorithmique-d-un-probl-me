@@ -17,7 +17,7 @@ public class SauvegardeLivreJeu {
         DOTExporter<Page, DefaultWeightedEdge> exporter = new DOTExporter<Page, DefaultWeightedEdge>();
 
         exporter.setVertexAttributeProvider((p) -> 
-            Map.of("label", new DefaultAttribute<>("P" + p.getId() + " - " + p.getEnigme().getTexte(), AttributeType.STRING))
+            Map.of("label", new DefaultAttribute<>("P" + p.getId() + " - " + p.getEnigme().getTexte() + " - " + p.getObjets(),  AttributeType.STRING))
         );
 
         exporter.setEdgeAttributeProvider((e) -> 
