@@ -14,7 +14,7 @@ public class Solution {
     public Solution(List<Page> pages, long tempsExecution) {
         this.pages = pages;
         this.tempsExecution = tempsExecution;
-        this.longueur = pages != null && !pages.isEmpty() ? pages.size() - 1 : 0;
+        this.longueur = pages != null && !pages.isEmpty() ? pages.size()  : 0;
         this.tempsParcours = 0;
         if (pages != null) {
             for (Page page : pages) {
